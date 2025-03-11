@@ -1,1 +1,37 @@
+"""Functions for implementing the rules of the classic arcade game Pac-Man."""
 
+touching_power_pellet = True
+power_pellet_active = True    
+touching_ghost = True 
+scoreboard = 0
+has_eaten_all_dots = True
+
+def eat_ghost(power_pellet_active, touching_ghost):
+    if power_pellet_active == True and touching_ghost == True:
+       return True
+    return False
+
+
+
+def score(power_pellet_active, scoreboard):
+    if power_pellet_active == True :
+        return True    
+
+    return False   
+
+
+
+def lose():
+    if power_pellet_active == False and touching_ghost == True :
+        print("Game Over")
+    pass
+    
+lose()
+
+def win():
+    if has_eaten_all_dots == True and power_pellet_active == True and touching_ghost == False :
+        print("You Win")
+
+    pass
+
+win()
